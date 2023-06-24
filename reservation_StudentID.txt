@@ -1,6 +1,5 @@
-2023-07-25
-1
-Chen Ming
-2200@gmail.com
-0123456789
-4
+2023-07-25|Slot 4|Sky|sky@gmail.com|0123456789|4
+2023-07-26|Slot 2|Alex|alex@gmail.com|0987654321|2
+2023-07-26|Slot 3|Ryan|ryan@gmail.com|0564738291|3
+2023-08-28|Slot 3|Lio|lio@gmail.com|0827361549|3
+2023-06-29|Slot 2|Leo|leo@gmail.com|0726351489|2
