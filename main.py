@@ -1,10 +1,10 @@
 #Main Execution File
 main = True
 while main:
-    option = str(input("Enter the following to proceed.\n1 - create reservation\nExit - End Transaction\nSelect: "))
+    option = str(input("Enter the following to proceed.\n1 - Create Reservation\nExit - Close Menu\nSelect: "))
     if option == "1":
         print("\nCreating Reservation")
-        with open("reservation_create.py") as create:
+        with open("CreateReservartion.py") as create:
             exec(create.read())
     if option == "2":
         pass
