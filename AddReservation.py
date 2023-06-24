@@ -26,7 +26,7 @@ while start:
                     people = int(input("Please enter the number of people (Maximun is 4 person): "))
                 if people <= 4:
                     information.append(people)
-                    with open(r"reservation_StudentID.txt", "a") as info:
+                    with open("reservation_StudentID.txt", "a") as info:
                         info.write("|".join(str(item) for item in information) + "\n")
                     start = False
             elif slot == "2":
@@ -43,7 +43,7 @@ while start:
                     people = int(input("Please enter the number of people (Maximun is 4 person): "))
                 if people <= 4:
                     information.append(people)
-                    with open(r"reservation_StudentID.txt", "a") as info:
+                    with open("reservation_StudentID.txt", "a") as info:
                         info.write("|".join(str(item) for item in information) + "\n")
                     start = False
             elif slot == "3":
@@ -60,7 +60,7 @@ while start:
                     people = int(input("Please enter the number of people (Maximun is 4 person): "))
                 if people < 5:
                     information.append(people)
-                    with open(r"reservation_StudentID.txt", "a") as info:
+                    with open("reservation_StudentID.txt", "a") as info:
                         info.write("|".join(str(item) for item in information) + "\n")
                     print()
                     start = False
@@ -78,7 +78,7 @@ while start:
                     people = int(input("Please enter the number of people (Maximun is 4 person): "))
                 if people < 5:
                     information.append(people)
-                    with open(r"reservation_StudentID.txt", "a") as info:
+                    with open("reservation_StudentID.txt", "a") as info:
                         info.write("|".join(str(item) for item in information) + "\n")
                     print()    
                     start = False
@@ -89,4 +89,13 @@ while start:
             print("Sorry, reservations must be at least 5 days in advance.")
     except:
         print("Error")
+    
+    finally:
+        again = input("Would you like to try again? [Y/N] ").lower()
+
+        while again != 'n' and again != 'y':
+            again = input("Would you like to try again? [Y/N]").lower()
+
+        if again == 'n':
+            start = False
 
