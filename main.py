@@ -10,20 +10,21 @@ def NavigateMenu():
                                          (|               (|                     
                                                                        
     """)
-    print(" 🌹 Welcome to Charming Thyme Trattoria! 🌹")
-    print(" [1] Book a reservation   🍽️")
-    print(" [2] Delete a reservation 🗑️")
-    print(" [3] Edit a reservation   ✍️")
-    print(" [4] Display Reservations 🗒️")
-    print(" [5] Recommend me a dish! 🍴")
-    print(" [Exit] Close Transaction ✅")
+    print(" {:=^110}".format("🌹 Welcome to Charming Thyme Trattoria! 🌹"))
+    print("")
+    print(" {:^112}".format("[1] Book a reservation   🍽️"))
+    print(" {:^112}".format("[2] Delete a reservation 🗑️"))
+    print(" {:^112}".format("[3] Edit a reservation   ✍️"))
+    print(" {:^112}".format("[4] Display Reservations 🗒️"))
+    print("{:^112}".format("[5] Recommend me a dish! 🍴"))
+    print("{:^112}".format("[Exit] Close Transaction ✅"))
 
 
 main = True
 while main:
     os.system("cls")
     NavigateMenu()
-    option = str(input(" Select: "))
+    option = str(input(f"{' '*43}Select: "))
     
     if option == "1":
         os.system("cls")
