@@ -8,3 +8,4 @@
 2023-07-25|Slot 1|cm|asd|asd|2
 2023-07-25|Slot 3|yes|yes@gmail.com|0123124123|2
 2023-07-25|Slot 2|queen|queen@gmail.com|0786554312|4
+2023-09-25|Slot 3|newline|newline@gmail.com|0123321321|2

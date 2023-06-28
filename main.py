@@ -40,19 +40,19 @@ while main:
     
     if option == "3":
         os.system("cls")
-        print("\Editing Reservation")
+        print("\nEditing Reservation")
         with open("EditReservation.py") as edit:
             exec(edit.read())
     
     if option == "4":
         os.system("cls")
-        print("\Displaying Reservation")
+        print("\nDisplaying Reservation")
         with open("Display.py") as display:
             exec(display.read())
     
     if option == "5":
         os.system("cls")
-        print("\Recommending a Dish")
+        print("\nRecommending a Dish")
         with open("MealRecommendation.py") as reco:
             exec(reco.read())
     
