@@ -1,5 +1,5 @@
 import random
-
+#TODO ask user how many to generate or if surprise then it will generate one
 start = True
 while start:
     with open("menuItems_StudentID.txt") as menulist:

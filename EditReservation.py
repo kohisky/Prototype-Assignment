@@ -19,7 +19,14 @@ while start:
         #Find/Check the location of the phone number in the list
         while pncheck != list[mobilelocation]:
             mobilelocation += 6
-        
+            if IndexError:
+                print("Number does not exist within the database.")
+                pncheck = input("Please enter your number to find your Reservation.")
+                mobilelocation = 4
+                continue
+            else:
+                break
+
         datelocation = mobilelocation - 4
         slotlocation = mobilelocation - 3
         namelocation = mobilelocation - 2
@@ -46,7 +53,6 @@ Email : {list[emaillocation]}
         if correct == 'no':
             start = False
 
-
         changeselection = input("""
 Reservation Changes:
 [1] Reschedule Reservation
@@ -62,9 +68,18 @@ Reservation Changes:
 [3] No Changes
 Select: """).lower()
         if changeselection == '1':
-            date_components = input('Reschedule Date (DD-MM-YYYY): ').split('-')
-            day, month, year = [int(item) for item in date_components]
-            reservationdate = date(year, month, day)
+            #TODO FIX THIS PART 
+            reservationdate = input("Please insert date (yyyy-mm-dd): ")
+            format = "%d-%m-%Y"
+            
+            while reservationdate != bool(datetime.strptime(reservationdate, format)):
+                print("Please insert date in the iso format (yyyy-mm-dd)!")
+                reservationdate = input("Please insert date (yyyy-mm-dd): ")
+                if ValueError:
+                    continue
+                else:
+                    break 
+            
             daycheck = datetime.date(datetime.now() + timedelta(days=5))
             
             if daycheck <= reservationdate:
@@ -131,14 +146,6 @@ Select: """)))
         elif changeselection == '3':
             start = False
 
-    except IndexError:
-        print("Number does not exist within the database.")
-        continue
-    
-    except ValueError:
-        print("Enter the date formatted as DD-MM-YYYY")
-        continue
-    
     finally:
         again = input("Would you like to edit your reservation? [Yes/No] ").lower()
 
