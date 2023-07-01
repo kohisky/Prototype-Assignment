@@ -68,25 +68,23 @@ Reservation Changes:
 [3] No Changes
 Select: """).lower()
         if changeselection == '1':
-            #TODO FIX THIS PART 
-            reservationdate = input("Please insert date (yyyy-mm-dd): ")
-            format = "%d-%m-%Y"
-            
-            while reservationdate != bool(datetime.strptime(reservationdate, format)):
-                print("Please insert date in the iso format (yyyy-mm-dd)!")
+            while True:
                 reservationdate = input("Please insert date (yyyy-mm-dd): ")
-                if ValueError:
-                    continue
-                else:
-                    break 
+                try:
+                    reservationdate = datetime.fromisoformat(reservationdate)
+                    reservationdate = datetime.date(reservationdate)
+                    
+                    daycheck = datetime.date(datetime.now() + timedelta(days=5))
             
-            daycheck = datetime.date(datetime.now() + timedelta(days=5))
-            
-            if daycheck <= reservationdate:
-                list[datelocation] = reservationdate
-            else:
-                print("Booking must be 5 days in advance")
-                start = False
+                    if daycheck <= reservationdate:
+                        list[datelocation] = str(reservationdate)
+                        break
+                    else:
+                        print("Booking must be 5 days in advance")
+                        continue
+                    
+                except ValueError:
+                    continue            
             
             list[slotlocation] = ("Slot " + str(input("""
 Please select a slot
